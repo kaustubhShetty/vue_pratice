@@ -1,0 +1,48 @@
+<!--In this App we have a navbar, when the variable isLogin is true then we see signout button in navbar and-->
+<!--When the variable isLogin is false we see signIn and signUp-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script> <!--Vue 3 cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!--Bootstrap 5 cdn-->
+    <title>Coditionals and Booleans</title>
+</head>
+<body class="bg-dark text-light" id="vapp">
+    <div class="container mt-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <template v-if="isLogin"> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SignUp</a>
+                       </li>
+                       <li class="nav-item">
+                         <a class="nav-link" href="#">SignIn</a>
+                        </li>
+                  </template>
+                  <template v-else> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                       </li>
+                  </template>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+    </div>    
+
+</body>
+<script src="./script.js"></script>
+</html>
